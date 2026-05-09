@@ -1,0 +1,15 @@
+PriorityClass
+Context
+
+You are working in a Kubernetes cluster with an existing Deployment named busybox-logger running in a namespace called priority .
+The cluster already has at least one user-defined PriorityClass.
+Task
+Perform the following tasks:
+
+Create a new PriorityClass named high-priority for user workloads.
+The value of this PriorityClass should be exactly one less than the highest existing user-defined PriorityClass value.
+Patch the existing Deployment busybox-logger in the priority namespace to use the newly created high-priority PriorityClass.
+Ensure the Deployment rolls out successfully.
+Note
+Pods from other Deployments in the namespace may be evicted automatically if resource contention occurs due to the higher priority of busybox-logger .
+Manual eviction is not required unless explicitly instructed.
