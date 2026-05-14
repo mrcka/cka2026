@@ -1,0 +1,13 @@
+Install Argo CD with Helm (Without CRDs)
+You are tasked to install Argo CD on the Kubernetes cluster using Helm (chart version 8.0.17) without installing CRDs.
+
+Requirements:
+Add the official Argo Helm repository and ensure it’s updated.
+Render the Argo CD Kubernetes manifests using helm template (do not install directly), ensuring:
+Helm release name: argo-cd
+Namespace: argocd
+CRDs are not installed (--set crds.install=false )
+Output to file: argo-template.yaml
+Create the argocd namespace if it does not exist.
+Apply the rendered manifest to the cluster.
+��� Provide only the necessary kubectl and helm commands to complete this installation.
