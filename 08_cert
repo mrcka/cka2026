@@ -1,0 +1,35 @@
+ert-manager Issuer Field Extraction
+
+
+🧪 Task:
+
+
+Verify cert-manager is running in the cluster.
+
+
+List all cert-manager CRDs and save to:
+~/issuer-resources.yaml
+
+
+Extract .spec.acme field of Issuer custom resource and save to:
+~/acme-doc.yaml
+
+
+Extract .spec.subject field of Certificate custom resource and save to:
+~/subject-doc.yaml
+
+
+cert-manager Issuer Field Extraction
+
+
+
+# List CRDs
+kubectl get crds | grep cert-manager > ~/issuer-resources.yaml
+
+Extract .spec.acme field
+kubectl explain issuers.cert-manager.io.spec.acme > ~/acme-doc.yaml
+
+
+Extract .spec.subject field
+kubectl explain certificates.cert-manager.io.spec.subject > ~/subject-doc.yaml
+
