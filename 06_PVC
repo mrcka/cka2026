@@ -1,0 +1,21 @@
+Restore mrDB Deployment
+A mrDB Deployment in the mrdb namespace has been deleted by mistake. Your task is to restore the Deployment while ensuring data persistence.
+Tasks
+Create a PersistentVolumeClaim (PVC)
+Name: mrdb
+Namespace: mrdb
+Storage Request: 250Mi
+Use the existing retained PersistentVolume (only one PV exists).
+Modify the mrDB Deployment
+The Deployment file is located at:
+
+~/mrdb-deployment.yaml
+
+Update the Deployment to use the PVC mrdb created in the previous step.
+
+Apply the updated Deployment to the cluster.
+Validation
+Ensure the following:
+
+mrDB Pod is running
+PVC is bound to the retained PersistentVolume
